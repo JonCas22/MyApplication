@@ -27,6 +27,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        Button2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,20 +38,31 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        Button2.setText("Button2");
+        Button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
+                .addGap(97, 97, 97)
                 .addComponent(jButton1)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addComponent(Button2)
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(140, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(Button2))
                 .addGap(137, 137, 137))
         );
 
@@ -61,6 +73,11 @@ public class MainFrame extends javax.swing.JFrame {
         SecondaryDialog d = new SecondaryDialog(this, true);
         d.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void Button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button2ActionPerformed
+        SecondaryDialog d = new SecondaryDialog(this, true);
+        d.setVisible(true);
+    }//GEN-LAST:event_Button2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +115,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Button2;
     private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
