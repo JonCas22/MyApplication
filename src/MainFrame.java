@@ -30,6 +30,7 @@ public class MainFrame extends javax.swing.JFrame {
         Button2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridLayout(3, 0));
 
         jButton1.setText("Button 1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -37,6 +38,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
 
         Button2.setText("Button2");
         Button2.addActionListener(new java.awt.event.ActionListener() {
@@ -44,27 +46,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Button2ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addComponent(jButton1)
-                .addGap(59, 59, 59)
-                .addComponent(Button2)
-                .addContainerGap(106, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(140, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(Button2))
-                .addGap(137, 137, 137))
-        );
+        getContentPane().add(Button2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
